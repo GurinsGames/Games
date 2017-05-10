@@ -1,0 +1,22 @@
+﻿<Window x:Class="Bumer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bumer"
+        mc:Ignorable="d"
+        Title="Bumer"
+        Height="350"
+        Width="525"
+        Background="Black"
+        Cursor="None"
+        Foreground="#FFE5F350"
+        Icon="Bumer.ico"
+        WindowStyle="None"
+        KeyDown="Window_KeyDown"
+        ContentRendered="Window_ContentRendered"
+        WindowState="Maximized">
+  <Grid>
+    <Canvas Name="canvas"/>
+  </Grid>
+</Window>

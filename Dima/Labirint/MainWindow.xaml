@@ -1,0 +1,75 @@
+﻿<Window x:Class="Labirint.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labirint"
+        mc:Ignorable="d"
+        Title="ЛАБИРИНТ"
+        Background="Beige"
+        WindowState="Maximized"
+        KeyDown="Window_KeyDown"
+        Icon="3758.ico"
+        SizeChanged="Window_SizeChanged"
+        WindowStyle="None"
+        Loaded="Window_Loaded">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="20" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <MediaElement Height="0" Width="0" Grid.Row="0"
+                  LoadedBehavior="Manual"
+                  Name="meMusic"
+                  VerticalAlignment="Top" />
+    <Menu Grid.Row="0">
+      <MenuItem Header="Настройки">
+        <MenuItem Header="Окно"
+                  Name="mnuWindow"
+                  Click="mnuWindow_Click" />
+        <MenuItem Header="Полный экран"
+                  Name="mnuFullScrean"
+                  Click="mnuFullScrean_Click" />
+        <Separator />
+        <MenuItem Header="Выход"
+                  Name="mnuExit"
+                  Click="mnuExit_Click" />
+      </MenuItem>
+      <MenuItem Header="Музыка">
+        <MenuItem Header="Без Музыки"
+                  Name="mnuNoMusic"
+                  Click="mnuNoMusic_Click" />
+        <MenuItem Header="Music1"
+                  Name="mnuMusic1"
+                  Click="mnuMusic1_Click" />
+        <MenuItem Header="Music2"
+                  Name="mnuMusic2"
+                  Click="mnuMusic2_Click" />
+        <MenuItem Header="Music3"
+                  Name="mnuMusic3"
+                  Click="mnuMusic3_Click" />
+        <MenuItem Header="Music4"
+                  Name="mnuMusic4"
+                  Click="mnuMusic4_Click" />
+        <MenuItem Header="Music5"
+                  Name="mnuMusic5"
+                  Click="mnuMusic5_Click" />
+      </MenuItem>
+      <Slider Width="210"
+              Orientation="Horizontal" Value="0.5" Maximum="1"
+              ValueChanged="Slider_ValueChanged" />
+    </Menu>
+    <Border Grid.Row="1">
+    <ScrollViewer x:Name="scroller"
+                  HorizontalScrollBarVisibility="Hidden"
+                  VerticalScrollBarVisibility="Hidden">
+      <Canvas Name="canvas">
+        <Image x:Name="man"
+               Height="400"
+               Width="400"
+               Source="Images/Slow.png" />
+      </Canvas>
+    </ScrollViewer>
+    </Border>
+  </Grid>
+</Window>
